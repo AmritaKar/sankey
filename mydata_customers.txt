@@ -1,0 +1,2 @@
+customer	fruit 	meat 	drinks	breadJohn 	5.5	13	8	2.5Mike	8.7	11	5	3.5Betty 	4.4	3.4	7	2Ben	4	18	16	2
+
