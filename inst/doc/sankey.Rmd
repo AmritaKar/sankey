@@ -1,0 +1,51 @@
+---
+title: "Sankey plot using ggplot2"
+author: "Amrita Kar"
+date: "`r Sys.Date()`"
+output: pdf_document
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The parameter set include:
+
+- @data : Input data to create the sankey figure
+- @datacol1 : The name of the entities for the sankey figure 
+- @pdfname : The name of the output plot to be generated 
+
+## Vignette Info
+
+This vignette is a tutorial for sankey plots created using the ggplot2 package in R. This includes the parameter used for generating the plot and also the sample output and dataset that can be used to test the package. 
+
+## Usage
+
+This can also be installed from github and run using library('sankey'). For more details check
+?create_sankey
+
+    usage: 
+      create_sankey(data,datacol1,pdfname)
+      create_sankey('mydata_customers.txt','customer','out')
+
+## Figures
+
+```{r fig.width=3, fig.height=8,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("/Users/amritakar/Desktop/sankey_package/out.png")
+grid.raster(img)
+```
+
+`Caption = "Demo of the output data."`
+
+## Example Dataset
+
+This is an example data of customers and their weekly grocery budget on items such as bread, fruit, meat and drinks. This data has been adapted from - https://github.com/anazalea/pySankey/blob/master/customers-goods.csv [https://github.com/anazalea/pySankey]
+
+```{r fig.width=4, fig.height=4,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("/Users/amritakar/Desktop/sankey_package/data.png")
+grid.raster(img)
+```
